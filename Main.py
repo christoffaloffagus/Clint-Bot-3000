@@ -2,8 +2,8 @@ import discord
 from discord.ext import commands
 import asyncio
 from itertools import cycle
+import os
 
-TOKEN = 'NTIyNDgzOTI1NTEyMDkzNjk2.DvLqjA.m-o0ghXz6r_bn6tr_rc36bo8TDc'
 client = commands.Bot(command_prefix='++')
 extensions = ['Mod', 'Game', 'Fun']
 
@@ -46,4 +46,4 @@ if __name__ == '__main__':
             print(f'{extension} cannot be loaded: {e}')
 
     client.loop.create_task(change_status())
-    client.run(TOKEN)
+    client.run(os.getenv('TOKEN-Clint'))
